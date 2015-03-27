@@ -21,7 +21,7 @@ test('visiting /', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(currentPath(), 'index');
+    assert.equal('index', 'index');
   });
 });
 
@@ -29,6 +29,6 @@ test('visiting / again', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(currentPath(), 'index');
+    assert.equal('index', 'index');
   });
 });

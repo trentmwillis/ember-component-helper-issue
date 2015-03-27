@@ -1,5 +1,14 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
+var NestedModel = DS.Model.extend({
   componentType: DS.attr('string')
 });
+
+NestedModel.reopenClass({
+  FIXTURES: [{
+    id: 1,
+    componentType: 'test-component'
+  }]
+});
+
+export default NestedModel;
